@@ -8,6 +8,11 @@
     <string name="developed_by">Developed by </string>
     <string name="app_version">Version 1.0.0</string>
 
+    <string name="sign_in">Sign in </string>
+    <string name="username_validation_msg">Please enter valid username</string>
+    <string name="password_validation_msg">Please enter valid password.</string>
+    <string name="remember_password">Remember Password</string>
+
 
     <!--<string name="home">होम</string>-->
     <string name="notification">सूचना</string>
