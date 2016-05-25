@@ -24,10 +24,12 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        if (drawer != null) {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                super.onBackPressed();
+            }
         }
     }
 
@@ -37,37 +39,54 @@ public class HomeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+        if (drawer != null) {
+            drawer.addDrawerListener(toggle);
+            toggle.syncState();
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            if (navigationView != null) {
+                navigationView.setNavigationItemSelectedListener(this);
+            }
+        }
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_notification) {
+        switch (item.getItemId()) {
+            case R.id.nav_notification:
+                break;
             // Handle the camera action
-        } else if (id == R.id.nav_form8) {
+            case R.id.nav_form8:
+                break;
 
-        } else if (id == R.id.nav_form8_register) {
+            case R.id.nav_form8_register:
+                break;
 
-        } else if (id == R.id.nav_form9) {
+            case R.id.nav_form9:
+                break;
 
-        } else if (id == R.id.nav_tax) {
+            case R.id.nav_tax:
+                break;
 
-        }else if (id == R.id.nav_help) {
+            case R.id.nav_help:
+                break;
 
-        } else if (id == R.id.nav_contact_us) {
+            case R.id.nav_contact_us:
+                break;
 
+            default:
+                break;
         }
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        if (drawer != null) {
+            drawer.closeDrawer(GravityCompat.START);
+        }
         return true;
     }
+
 }
+

@@ -8,7 +8,8 @@
     <string name="developed_by">Developed by </string>
     <string name="app_version">Version 1.0.0</string>
 
-    <string name="sign_in">Sign in </string>
+    <string name="generate_otp">Generate OTP </string>
+    <string name="sign_in">Sign In </string>
     <string name="username_validation_msg">Please enter valid username</string>
     <string name="password_validation_msg">Please enter valid password.</string>
     <string name="remember_password">Remember Password</string>
@@ -24,4 +25,14 @@
     <string name="help">मदत</string>
     <string name="contact_us">संपर्क</string>
     <string name="logout">बाहेर पडा  </string>
+    <string name="village">गाव (Village)</string>
+    <string name="anukrmank">अनुक्रमांक </string>
+    <string name="enter_otp">Enter OTP</string>
+
+
+    <string-array name="array_name">
+        <item>Array Item One</item>
+        <item>Array Item Two</item>
+        <item>Array Item Three</item>
+    </string-array>
 </resources>

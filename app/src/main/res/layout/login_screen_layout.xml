@@ -7,70 +7,114 @@
 
     <ImageView
         android:id="@+id/login_iv_logo"
-        android:layout_width="200dp"
-        android:layout_height="142dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/margin_10dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/splash_logo" />
 
-    <EditText
-        android:id="@+id/login_et_username"
+    <TextView
+        android:id="@+id/txt_heading"
+        style="@style/DashBoard_Text_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_iv_logo"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="Username"
-        android:paddingLeft="10dp"
-        android:singleLine="true"
-        android:textAllCaps="false"
-        android:textColor="@color/md_black_1000"
-        android:textColorHint="@color/md_black_1000"
-        android:textSize="@dimen/text_18sp" />
-
-
-    <EditText
-        android:id="@+id/login_et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_et_username"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingLeft="10dp"
-        android:singleLine="true"
-        android:textAllCaps="false"
-        android:textColor="@color/md_black_1000"
-        android:textColorHint="@color/md_black_1000"
-        android:textSize="@dimen/text_18sp" />
-
-    <Button
-        android:id="@+id/login_button_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_et_password"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/login_button_bg"
-        android:padding="10dp"
-        android:text="@string/sign_in"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_18sp"
-        android:textStyle="bold" />
-
-    <CheckBox android:id="@+id/chk_keep_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_button_login"
-        android:layout_marginTop="@dimen/margin_10dp"
-        android:checked="true"
-        android:text="@string/remember_password"
+        android:layout_below="@id/login_iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/village"
         android:textColor="@color/md_white_1000"
-        android:textSize="@dimen/text_18sp" />
+        android:textSize="@dimen/text_20sp" />
+
+    <Spinner
+        android:id="@+id/sp_village"
+        style="@style/AppSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_heading"
+        android:layout_gravity="start"
+        android:background="@color/md_white_1000"
+        android:dropDownSelector="@color/md_green_600"
+        android:entries="@array/array_name"
+        android:popupBackground="@color/md_white_1000" />
+
+    <LinearLayout
+        android:id="@+id/ll_generate_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_village"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edt_username"
+            style="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="@string/anukrmank"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/md_grey_500"
+            android:textSize="@dimen/text_18sp" />
+
+        <Button
+            android:id="@+id/btn_generate_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_button_bg"
+            android:padding="10dp"
+            android:text="@string/generate_otp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_submit_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_village"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_enter_otp"
+            style="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="@string/enter_otp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/md_grey_500"
+            android:textSize="@dimen/text_18sp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_button_bg"
+            android:padding="10dp"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
+        android:id="@+id/developed_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -79,4 +123,15 @@
         android:textColor="@color/white"
         android:textSize="16sp" />
 
+    <CheckBox
+        android:id="@+id/chk_keep_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/developed_by"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:checked="true"
+        android:text="@string/remember_password"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/text_18sp"
+        android:visibility="gone" />
 </RelativeLayout>

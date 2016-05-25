@@ -37,7 +37,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     };
 
     private void checkUserLogin() {
-        Intent loginIntent = new Intent(SplashScreenActivity.this, HomeActivity.class);
+        Intent loginIntent = new Intent(SplashScreenActivity.this, LoginScreenActivity.class);
         startActivity(loginIntent);
         finish();
 
