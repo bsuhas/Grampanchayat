@@ -30,9 +30,7 @@
     <string name="enter_otp">Enter OTP</string>
     <string name="lbl_anukrmank">अनुक्रमांक (Username)</string>
 
-    <string-array name="array_name">
-        <item>Array Item One</item>
-        <item>Array Item Two</item>
-        <item>Array Item Three</item>
-    </string-array>
+    <string name="oops_notifications">Oops,you don\'t have notifications to view</string>
+
+
 </resources>

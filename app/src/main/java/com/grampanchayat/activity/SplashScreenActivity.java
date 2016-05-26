@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.grampanchayat.R;
+import com.grampanchayat.utils.UserPreferences;
 
 /**
  * Created by suhasbachewar on 24/5/16.
@@ -37,19 +38,16 @@ public class SplashScreenActivity extends AppCompatActivity {
     };
 
     private void checkUserLogin() {
-        Intent loginIntent = new Intent(SplashScreenActivity.this, LoginScreenActivity.class);
-        startActivity(loginIntent);
-        finish();
 
-//        boolean isLoggedIn = UserPreferences.getInstance(mContext).isUserLogin();
-//        if (isLoggedIn) {
-//            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
-//            Intent loginIntent = new Intent(SplashScreenActivity.this, LoginScreenActivity.class);
-//            startActivity(loginIntent);
-//            finish();
-//        }
+        boolean isLoggedIn = UserPreferences.getInstance(mContext).isUserLogin();
+        if (isLoggedIn) {
+            Intent intent = new Intent(SplashScreenActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Intent loginIntent = new Intent(SplashScreenActivity.this, LoginScreenActivity.class);
+            startActivity(loginIntent);
+            finish();
+        }
     }
 }

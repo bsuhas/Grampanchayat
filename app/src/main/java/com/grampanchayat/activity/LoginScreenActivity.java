@@ -1,5 +1,6 @@
 package com.grampanchayat.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.grampanchayat.R;
+import com.grampanchayat.utils.UserPreferences;
 
 /**
  * Created by SUHAS on 25/05/2016.
@@ -45,6 +47,15 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
         llGenerateOTP = (LinearLayout) findViewById(R.id.ll_generate_otp);
         llSubmitOTP = (LinearLayout) findViewById(R.id.ll_submit_otp);
 
+        boolean isLoggedIn = UserPreferences.getInstance(this).isUserLogin();
+        if (isLoggedIn) {
+            llGenerateOTP.setVisibility(View.GONE);
+            llSubmitOTP.setVisibility(View.VISIBLE);
+
+        } else {
+            llGenerateOTP.setVisibility(View.VISIBLE);
+            llSubmitOTP.setVisibility(View.GONE);
+        }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.sp_village_item, R.id.txt_village, DayOfWeek);
         spVillage.setAdapter(adapter);
@@ -63,15 +74,20 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
                 } else {
 
                     //TODO Call API to Generate OTP
+                    llGenerateOTP.setVisibility(View.GONE);
+                    llSubmitOTP.setVisibility(View.VISIBLE);
                 }
                 break;
             case R.id.btn_login:
-                String strOTP= edtEnterOtp.getText().toString().trim();
+                String strOTP = edtEnterOtp.getText().toString().trim();
                 if (TextUtils.isEmpty(strOTP)) {
                     Toast.makeText(this, "Please enter valid OTP", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    UserPreferences.getInstance(this).saveUserInfo("",true);
                     //TODO Call API to Submit OTP & Login
+                    Intent intent = new Intent(LoginScreenActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
 
                 break;
