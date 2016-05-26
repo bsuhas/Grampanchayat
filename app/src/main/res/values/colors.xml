@@ -4,8 +4,8 @@
     <color name="colorPrimaryDark">#7f4216</color>
     <color name="colorAccent">#7f4216</color>
 
-    <color name="btnSelectedColor">#ffffff</color>
-    <color name="btnUnSelectedColor">#ce97582a</color>
+    <color name="btnSelectedColor">#7f4216</color>
+    <color name="btnUnSelectedColor">#d197582a</color>
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>

@@ -21,7 +21,7 @@
         <item name="textAllCaps">false</item>
         <item name="android:textStyle">bold</item>
         <item name="android:singleLine">true</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">left</item>
         <item name="android:textColor">@color/md_black_1000</item>
     </style>
 
@@ -73,6 +73,9 @@
     </style>
 
 
-    <style name="AppSpinner" parent="@android:style/Widget.Holo.Light.Spinner"></style>
+    <style name="AppSpinner" parent="@android:style/Widget.Holo.Spinner">
+    </style>
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
 
+    </style>
 </resources>

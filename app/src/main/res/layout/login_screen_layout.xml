@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#954f24"
+    android:background="#e4954f24"
     android:padding="20dp">
 
     <ImageView
@@ -20,8 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_iv_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_centerVertical="true"
         android:layout_marginTop="20dp"
         android:text="@string/village"
         android:textColor="@color/md_white_1000"
@@ -32,27 +31,37 @@
         style="@style/AppSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/txt_heading"
-        android:layout_gravity="start"
-        android:background="@color/md_white_1000"
-        android:dropDownSelector="@color/md_green_600"
-        android:entries="@array/array_name"
-        android:popupBackground="@color/md_white_1000" />
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_marginLeft="-5dp"
+        android:popupBackground="#7f4216" />
 
     <LinearLayout
         android:id="@+id/ll_generate_otp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sp_village"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
         android:visibility="visible">
+
+        <TextView
+            style="@style/DashBoard_Text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:text="@string/lbl_anukrmank"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/text_20sp" />
 
         <EditText
             android:id="@+id/edt_username"
             style="@style/MyEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:background="@drawable/edit_text_border"
             android:hint="@string/anukrmank"
             android:paddingLeft="10dp"
@@ -66,12 +75,12 @@
             android:id="@+id/btn_generate_otp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/login_button_bg"
             android:padding="10dp"
             android:text="@string/generate_otp"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/md_white_1000"
             android:textSize="@dimen/text_18sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -81,15 +90,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sp_village"
-        android:visibility="gone"
-        android:orientation="vertical">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/DashBoard_Text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:text="@string/enter_otp"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/text_20sp" />
 
         <EditText
             android:id="@+id/edt_enter_otp"
             style="@style/MyEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:background="@drawable/edit_text_border"
             android:hint="@string/enter_otp"
             android:paddingLeft="10dp"
@@ -103,12 +122,12 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/login_button_bg"
             android:padding="10dp"
             android:text="@string/sign_in"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/md_white_1000"
             android:textSize="@dimen/text_18sp"
             android:textStyle="bold" />
     </LinearLayout>
