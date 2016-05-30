@@ -43,7 +43,7 @@
             android:layout_gravity="left|center"
             android:layout_marginTop="@dimen/margin_10dp"
             android:singleLine="true"
-            android:text="Supervisor"
+            android:text="Gram Vikas Adhikari"
             android:textAllCaps="false"
             android:textColor="@color/md_white_1000"
             android:textSize="@dimen/text_16sp"

@@ -15,12 +15,12 @@ import com.grampanchayat.R;
 /**
  * Created by SUHAS on 26/05/2016.
  */
-public class NotificationFragment extends Fragment {
+public class Form8EntryFragment extends Fragment {
 
     private Context mContext;
     private RecyclerView cardList;
     private RelativeLayout rlEmpty;
-
+//    https://www.javacodegeeks.com/2013/09/android-expandablecollapsible-views.html
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.notification_fragment_layout, container, false);
