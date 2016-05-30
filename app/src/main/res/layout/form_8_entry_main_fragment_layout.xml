@@ -5,27 +5,84 @@
     android:layout_margin="@dimen/margin_5dp"
     android:orientation="vertical">
 
-    <TextView
-        style="@style/TextViewHeaderStyle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/headerLightBlueColor"
-        android:layout_marginBottom="@dimen/margin_5dp"
-        android:text="Form8" />
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
-    <TextView
-        style="@style/TextViewHeaderStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/headerLightBlueColor"
-        android:layout_marginBottom="@dimen/margin_5dp"
-        android:text="Form8" />
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="@dimen/margin_5dp"
+            android:text="@string/lbl_year"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        style="@style/TextViewHeaderStyle"
+        <Spinner
+            android:id="@+id/sp_year_range"
+            style="@style/AppSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.8" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_form8_top_header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/headerLightBlueColor"
         android:layout_marginBottom="@dimen/margin_5dp"
-        android:text="Form8" />
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewHeaderStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/headerLightBlueColor"
+            android:text="मालमत्तेची माहिती" />
+
+        <include layout="@layout/form8_entry_top_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_form8_top_header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewHeaderStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/headerLightBlueColor"
+            android:text="मालमत्ता धारकाची माहिती" />
+
+        <include layout="@layout/form8_entry_middle_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_form8_top_header3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewHeaderStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/headerLightBlueColor"
+            android:text="कराची माहिती" />
+
+        <include layout="@layout/form8_entry_bottom_layout" />
+    </LinearLayout>
 </LinearLayout>

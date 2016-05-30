@@ -23,13 +23,17 @@
             android:icon="@drawable/tax"
             android:title="@string/tax_pay" />
         <item
+            android:id="@+id/nav_sync"
+            android:icon="@drawable/ic_sync_white"
+            android:title="@string/sync" />
+        <item
             android:id="@+id/nav_export"
             android:icon="@drawable/ic_export_white"
             android:title="@string/export" />
-        <item
+       <!-- <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_lock_open_white"
-            android:title="@string/logout"/>
+            android:title="@string/logout"/>-->
     </group>
 
     <item android:title="संवाद">

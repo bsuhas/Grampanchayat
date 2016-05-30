@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.grampanchayat.R;
+import com.grampanchayat.fragment.Form8EntryFragment;
 import com.grampanchayat.fragment.NotificationFragment;
 import com.grampanchayat.utils.UserPreferences;
 import com.grampanchayat.utils.Utils;
@@ -101,6 +102,7 @@ public class HomeActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
         switch (item.getItemId()) {
             case R.id.nav_notification:
@@ -110,6 +112,9 @@ public class HomeActivity extends AppCompatActivity
                 break;
             // Handle the camera action
             case R.id.nav_form8:
+                Bundle bundle1 = new Bundle();
+                setFragment(new Form8EntryFragment(), bundle1);
+                setTitle(R.string.notification);
                 break;
 
             case R.id.nav_form8_register:
@@ -125,6 +130,9 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_contact_us:
+                break;
+
+            case R.id.nav_sync:
                 break;
 
             default:
