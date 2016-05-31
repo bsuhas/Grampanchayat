@@ -45,6 +45,13 @@
     <string name="lbl_area">क्षेत्रफळ</string>
     <string name="lbl_owner_name">भोगवटदाराचे नाव</string>
     <string name="lbl_business">व्यावसायिक</string>
+    <string name="lbl_year_rent">वार्षिक किंमत/ भाडे</string>
+    <string name="lbl_malmata_details">मालमत्तेचे वर्णन</string>
+    <string name="lbl_home_num">घर न.</string>
+    <string name="lbl_sr_num">सर्वे न.</string>
+    <string name="lbl_bandhkam">बांधकाम</string>
+    <string name="lbl_build_year">सन</string>
+    <string name="ibl_use_for">वापर</string>
 
 
 </resources>
