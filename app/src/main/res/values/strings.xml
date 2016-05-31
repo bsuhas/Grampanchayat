@@ -35,6 +35,16 @@
     <string name="lbl_year">वर्ष : </string>
 
     <string name="oops_notifications">Oops,you don\'t have notifications to view</string>
+    <string name="lab_new">नवीन</string>
+    <string name="lbl_heading_mal_mataha_mahiti">मालमत्तेची माहिती</string>
+    <string name="lbl_save">साठवणे</string>
+    <string name="lbl_malmata_krmanak">मालमत्ता क्र.</string>
+    <string name="lbl_home_type">घराचा प्रकार</string>
+    <string name="lbl_lambi">लांबी</string>
+    <string name="lbl_rundi">रुंदी</string>
+    <string name="lbl_area">क्षेत्रफळ</string>
+    <string name="lbl_owner_name">भोगवटदाराचे नाव</string>
+    <string name="lbl_business">व्यावसायिक</string>
 
 
 </resources>
