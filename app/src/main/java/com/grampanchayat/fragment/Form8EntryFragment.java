@@ -20,9 +20,9 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
 
     private Context mContext;
     private LinearLayout llMalmataMahiti;
-    private LinearLayout llForm8TopHeader1;
-    private LinearLayout llForm8TopHeader2;
-    private LinearLayout llForm8TopHeader3;
+//    private LinearLayout llForm8TopHeader1;
+//    private LinearLayout llForm8TopHeader2;
+//    private LinearLayout llForm8TopHeader3;
     private LinearLayout llMalmataDharakachiMahiti;
     private LinearLayout llKarachiMahiti;
     private TextView txtForm8TopHeader1;
@@ -39,14 +39,15 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
     }
 
     private void init(View view) {
+
         llMalmataMahiti = (LinearLayout) view.findViewById(R.id.ll_malmata_mahiti);
         llMalmataDharakachiMahiti = (LinearLayout) view.findViewById(R.id.ll_malmata_dharakachi_mahiti);
         llKarachiMahiti = (LinearLayout) view.findViewById(R.id.ll_karachi_mahiti);
 
 
-        llForm8TopHeader1 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header1);
-        llForm8TopHeader2 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header2);
-        llForm8TopHeader3 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header3);
+//        llForm8TopHeader1 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header1);
+//        llForm8TopHeader2 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header2);
+//        llForm8TopHeader3 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header3);
 
         txtForm8TopHeader1 = (TextView) view.findViewById(R.id.txt_form8_top_header1);
         txtForm8TopHeader2 = (TextView) view.findViewById(R.id.txt_form8_top_header2);

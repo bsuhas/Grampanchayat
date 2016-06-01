@@ -111,6 +111,7 @@
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:textAllCaps="false"
+            android:focusable="true"
             android:textColor="@color/md_black_1000"
             android:textColorHint="@color/md_grey_500"
             android:textSize="@dimen/text_18sp" />

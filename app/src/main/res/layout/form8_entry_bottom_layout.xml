@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/margin_10dp"
     android:orientation="vertical"
-    android:visibility="gone">
+    android:visibility="visible">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,8 +99,7 @@
             android:id="@+id/edt_jaminicha_dr_heactori"
             style="@style/Edit_TextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -157,20 +156,21 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/Label_TextView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:text="@string/lbl_concession" />
 
         <EditText
             android:id="@+id/edt_concession"
             style="@style/Edit_TextView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:layout_weight="0.5"/>
 
     </LinearLayout>
 
@@ -179,20 +179,22 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:weightSum="1"
+        android:orientation="horizontal">
 
         <TextView
             style="@style/Label_TextView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:text="@string/lbl_old_home_tax_bill" />
 
         <EditText
             android:id="@+id/edt_old_home_tax_bill"
             style="@style/Edit_TextView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:layout_weight="0.5" />
 
     </LinearLayout>
 
@@ -201,20 +203,21 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_10dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <TextView
             style="@style/Label_TextView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:text="@string/lbl_road_name" />
 
         <EditText
             android:id="@+id/edt_road_name"
             style="@style/Edit_TextView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:layout_weight="0.5"/>
 
     </LinearLayout>
 
