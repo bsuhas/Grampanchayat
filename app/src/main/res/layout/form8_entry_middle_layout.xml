@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_malmata_dharakachi_mahiti"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/ll_malmata_dharakachi_mahiti"
-    android:visibility="gone"
-    android:orientation="vertical">
+    android:layout_marginTop="@dimen/margin_10dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,15 +20,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="customer_name" />
+            android:text="@string/lbl_khatedar" />
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_txt_Cust_name"
-            style="@style/Edit_TextView"
+        <Spinner
+            android:id="@+id/sp_customer"
+            style="@style/AppSpinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:ems="10" />
+            android:layout_gravity="start"
+            android:layout_weight="0.5" />
     </LinearLayout>
 
 
@@ -43,34 +45,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="cargo_wt_kgs" />
+            android:text="@string/lbl_name" />
 
         <EditText
-            android:id="@+id/edt_cargo_wt"
-            style="@style/Edit_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="tare_wt_kgs" />
-
-        <EditText
-            android:id="@+id/edt_tare_wt"
+            android:id="@+id/edt_cust_name"
             style="@style/Edit_TextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -91,10 +69,34 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="manufactured_csc_plate" />
+            android:text="@string/lbl_addr" />
 
         <EditText
-            android:id="@+id/edt_manufactured_plate"
+            android:id="@+id/edt_cust_address"
+            style="@style/Edit_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/ll_wifename" />
+
+        <EditText
+            android:id="@+id/edt_wife_name"
             style="@style/Edit_TextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -114,7 +116,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="checkers_names" />
+            android:text="@string/hint_mobile_num" />
 
         <EditText
             android:id="@+id/edt_checker_name"
@@ -124,53 +126,29 @@
             android:layout_weight="0.5" />
     </LinearLayout>
 
-    <!-- <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginBottom="@dimen/margin_10dp"
-         android:gravity="center"
-         android:orientation="horizontal"
-         android:weightSum="1">
-
-         <TextView
-             style="@style/Label_TextView"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="0.5"
-             android:text="lbl_22g1_container" />
-
-         <Spinner
-             android:id="@+id/sp_22g1"
-             style="@style/AppSpinner"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_gravity="start"
-             android:layout_weight="0.5" />
-
-     </LinearLayout>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
+        android:orientation="horizontal">
 
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/MyButtonStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="cargo_type" />
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:padding="@dimen/margin_10dp"
+            android:text="@string/lbl_save" />
 
-        <Spinner
-            android:id="@+id/sp_cargo_type"
-            style="@style/AppSpinner"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/btn_new"
+            style="@style/MyButtonStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_weight="0.5" />
-
+            android:padding="@dimen/margin_10dp"
+            android:text="@string/lab_new" />
     </LinearLayout>
 </LinearLayout>

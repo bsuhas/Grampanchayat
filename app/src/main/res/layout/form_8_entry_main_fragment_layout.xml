@@ -51,7 +51,7 @@
                 android:layout_marginBottom="@dimen/margin_5dp"
                 android:orientation="vertical">
 
-                <TextView
+                <TextView android:id="@+id/txt_form8_top_header1"
                     style="@style/TextViewHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 android:layout_marginBottom="@dimen/margin_5dp"
                 android:orientation="vertical">
 
-                <TextView
+                <TextView android:id="@+id/txt_form8_top_header2"
                     style="@style/TextViewHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 android:layout_marginBottom="@dimen/margin_5dp"
                 android:orientation="vertical">
 
-                <TextView
+                <TextView android:id="@+id/txt_form8_top_header3"
                     style="@style/TextViewHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

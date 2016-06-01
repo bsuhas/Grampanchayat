@@ -1,34 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_karachi_mahiti"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/ll_karachi_mahiti"
-    android:visibility="gone"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="customer_name" />
-
-        <AutoCompleteTextView
-            android:id="@+id/auto_txt_Cust_name"
-            style="@style/Edit_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:ems="10" />
-    </LinearLayout>
-
+    android:layout_marginTop="@dimen/margin_10dp"
+    android:orientation="vertical"
+    android:visibility="gone">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,129 +20,221 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="cargo_wt_kgs" />
-
-        <EditText
-            android:id="@+id/edt_cargo_wt"
-            style="@style/Edit_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="tare_wt_kgs" />
-
-        <EditText
-            android:id="@+id/edt_tare_wt"
-            style="@style/Edit_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="manufactured_csc_plate" />
-
-        <EditText
-            android:id="@+id/edt_manufactured_plate"
-            style="@style/Edit_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="checkers_names" />
-
-        <EditText
-            android:id="@+id/edt_checker_name"
-            style="@style/Edit_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5" />
-    </LinearLayout>
-
-    <!-- <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginBottom="@dimen/margin_10dp"
-         android:gravity="center"
-         android:orientation="horizontal"
-         android:weightSum="1">
-
-         <TextView
-             style="@style/Label_TextView"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="0.5"
-             android:text="lbl_22g1_container" />
-
-         <Spinner
-             android:id="@+id/sp_22g1"
-             style="@style/AppSpinner"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_gravity="start"
-             android:layout_weight="0.5" />
-
-     </LinearLayout>-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            style="@style/Label_TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="cargo_type" />
+            android:text="@string/lbl_health_tax" />
 
         <Spinner
-            android:id="@+id/sp_cargo_type"
+            android:id="@+id/sp_health_tax"
+            style="@style/AppSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/lbl_land_info" />
+
+        <Spinner
+            android:id="@+id/sp_land_info"
+            style="@style/AppSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/lbl_electricity_tax" />
+
+        <Spinner
+            android:id="@+id/sp_electricity_tax"
+            style="@style/AppSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_jaminicha_dr_heactori" />
+
+        <EditText
+            android:id="@+id/edt_jaminicha_dr_heactori"
+            style="@style/Edit_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/edt_jaminicha_dr_per_meter"
+            style="@style/Edit_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" />
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/lbl_sq_meter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/lbl_water_bill" />
+
+        <Spinner
+            android:id="@+id/sp_water_bill"
+            style="@style/AppSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_concession" />
+
+        <EditText
+            android:id="@+id/edt_concession"
+            style="@style/Edit_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_old_home_tax_bill" />
+
+        <EditText
+            android:id="@+id/edt_old_home_tax_bill"
+            style="@style/Edit_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_road_name" />
+
+        <EditText
+            android:id="@+id/edt_road_name"
+            style="@style/Edit_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/Label_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/lbl_bhandwali_mulya_padath" />
+
+        <Spinner
+            android:id="@+id/sp_bhandwali_mulya_padath"
             style="@style/AppSpinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

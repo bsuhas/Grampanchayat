@@ -52,6 +52,20 @@
     <string name="lbl_bandhkam">बांधकाम</string>
     <string name="lbl_build_year">सन</string>
     <string name="ibl_use_for">वापर</string>
+    <string name="lbl_khatedar">खातेदार</string>
+    <string name="lbl_name">नाव</string>
+    <string name="lbl_addr">पत्ता</string>
+    <string name="ll_wifename">पत्नीचे नाव</string>
+    <string name="lbl_health_tax">आरोग्य कर</string>
+    <string name="lbl_land_info">जमिनीची माहिती</string>
+    <string name="lbl_electricity_tax">विज कर</string>
+    <string name="lbl_jaminicha_dr_heactori">जमिनीचा भांडवली मूल्य दर हेक्टरी</string>
+    <string name="lbl_sq_meter">चौ/मिटर</string>
+    <string name="lbl_water_bill">पाणीपट्टी</string>
+    <string name="lbl_concession">सूट</string>
+    <string name="lbl_old_home_tax_bill">जुनी घरपट्टी</string>
+    <string name="lbl_road_name">रस्त्याचे नाव</string>
+    <string name="lbl_bhandwali_mulya_padath">भांडवली मूल्य पद्धत</string>
 
 
 </resources>

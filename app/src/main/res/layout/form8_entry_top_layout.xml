@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/margin_10dp"
-    android:visibility="visible">
+    android:visibility="gone">
 
     <include layout="@layout/form8_item_layout" />
 
-    <android.support.v7.widget.RecyclerView
+   <!-- <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />-->
 </LinearLayout>

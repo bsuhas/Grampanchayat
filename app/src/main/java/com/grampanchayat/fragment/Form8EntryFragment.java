@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.grampanchayat.R;
 
@@ -24,6 +25,9 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
     private LinearLayout llForm8TopHeader3;
     private LinearLayout llMalmataDharakachiMahiti;
     private LinearLayout llKarachiMahiti;
+    private TextView txtForm8TopHeader1;
+    private TextView txtForm8TopHeader2;
+    private TextView txtForm8TopHeader3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,9 +48,13 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
         llForm8TopHeader2 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header2);
         llForm8TopHeader3 = (LinearLayout) view.findViewById(R.id.ll_form8_top_header3);
 
-        llForm8TopHeader1.setOnClickListener(this);
-        llForm8TopHeader2.setOnClickListener(this);
-        llForm8TopHeader3.setOnClickListener(this);
+        txtForm8TopHeader1 = (TextView) view.findViewById(R.id.txt_form8_top_header1);
+        txtForm8TopHeader2 = (TextView) view.findViewById(R.id.txt_form8_top_header2);
+        txtForm8TopHeader3 = (TextView) view.findViewById(R.id.txt_form8_top_header3);
+
+        txtForm8TopHeader1.setOnClickListener(this);
+        txtForm8TopHeader2.setOnClickListener(this);
+        txtForm8TopHeader3.setOnClickListener(this);
     }
 
     public void toggle_contents(View v) {
@@ -87,14 +95,14 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.ll_form8_top_header1:
+            case R.id.txt_form8_top_header1:
                 toggle_contents(llMalmataMahiti);
                 break;
 
-            case R.id.ll_form8_top_header2:
+            case R.id.txt_form8_top_header2:
                 toggle_contents(llMalmataDharakachiMahiti);
                 break;
-            case R.id.ll_form8_top_header3:
+            case R.id.txt_form8_top_header3:
                 toggle_contents(llKarachiMahiti);
                 break;
         }
