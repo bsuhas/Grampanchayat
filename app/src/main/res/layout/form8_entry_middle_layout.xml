@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/margin_10dp"
-    android:padding="@dimen/margin_10dp"
     android:orientation="vertical"
+    android:padding="@dimen/margin_10dp"
     android:visibility="gone">
 
     <LinearLayout
@@ -94,7 +94,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="@string/ll_wifename" />
+            android:text="@string/lb_wifename" />
 
         <EditText
             android:id="@+id/edt_wife_name"
@@ -152,4 +152,10 @@
             android:padding="@dimen/margin_10dp"
             android:text="@string/lab_new" />
     </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_property_owner_detail"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_height="wrap_content" />
 </LinearLayout>

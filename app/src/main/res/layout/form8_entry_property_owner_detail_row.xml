@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10dp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/ll_malmata_mahiti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/lbl_khatedar"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_khatedar"
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/lbl_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/lbl_addr"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_addr"
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/lb_wifename"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_wifename"
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/hint_mobile_num"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_mobile_num"
+                style="@style/Label_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+        <!-- button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_delete"
+                style="@style/MyButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10dp"
+                android:text="@string/lbl_delete" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.grampanchayat.R;
-import com.grampanchayat.adapter.Form8TopFormAdapter;
+import com.grampanchayat.adapter.Form8EntryPropertyDetailAdapter;
 import com.grampanchayat.models.PropertyDetailModel;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
     private TextView txtForm8TopHeader2;
     private TextView txtForm8TopHeader3;
     private RecyclerView rvTopEntryFromList;
-    private Form8TopFormAdapter mAdapter;
+    private Form8EntryPropertyDetailAdapter mAdapter;
     private List<PropertyDetailModel> propertyDetailModelList = new ArrayList<>();
 
     @Override
@@ -69,7 +69,7 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
         txtForm8TopHeader3.setOnClickListener(this);
         prepareMovieData();
         rvTopEntryFromList =(RecyclerView) view.findViewById(R.id.rv_topEntryFromList);
-        mAdapter = new Form8TopFormAdapter(propertyDetailModelList);
+        mAdapter = new Form8EntryPropertyDetailAdapter(propertyDetailModelList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         rvTopEntryFromList.setLayoutManager(mLayoutManager);
         rvTopEntryFromList.setItemAnimator(new DefaultItemAnimator());

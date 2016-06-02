@@ -16,12 +16,12 @@ import java.util.List;
  * @ Firstcry
  * Created by suhasbachewar on 2/6/16.
  */
-public class Form8TopFormAdapter extends RecyclerView.Adapter<Form8TopFormAdapter.MyViewHolder> {
+public class Form8EntryPropertyDetailAdapter extends RecyclerView.Adapter<Form8EntryPropertyDetailAdapter.MyViewHolder> {
 
     private List<PropertyDetailModel> moviesList;
 
 
-    public Form8TopFormAdapter(List<PropertyDetailModel> moviesList) {
+    public Form8EntryPropertyDetailAdapter(List<PropertyDetailModel> moviesList) {
         this.moviesList = moviesList;
     }
 

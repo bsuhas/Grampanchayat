@@ -55,7 +55,7 @@
     <string name="lbl_khatedar">खातेदार</string>
     <string name="lbl_name">नाव</string>
     <string name="lbl_addr">पत्ता</string>
-    <string name="ll_wifename">पत्नीचे नाव</string>
+    <string name="lb_wifename">पत्नीचे नाव</string>
     <string name="lbl_health_tax">आरोग्य कर</string>
     <string name="lbl_land_info">जमिनीची माहिती</string>
     <string name="lbl_electricity_tax">विज कर</string>
