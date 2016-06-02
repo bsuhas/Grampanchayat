@@ -51,7 +51,7 @@
     <string name="lbl_sr_num">सर्वे न.</string>
     <string name="lbl_bandhkam">बांधकाम</string>
     <string name="lbl_build_year">सन</string>
-    <string name="ibl_use_for">वापर</string>
+    <string name="lbl_use_for">वापर</string>
     <string name="lbl_khatedar">खातेदार</string>
     <string name="lbl_name">नाव</string>
     <string name="lbl_addr">पत्ता</string>

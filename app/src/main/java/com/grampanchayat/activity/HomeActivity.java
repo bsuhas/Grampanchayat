@@ -41,7 +41,9 @@ public class HomeActivity extends AppCompatActivity
         init();
 
         Bundle bundle = new Bundle();
-        setFragment(new NotificationFragment(), bundle);
+//        setFragment(new NotificationFragment(), bundle);
+//        setTitle(R.string.notification);
+        setFragment(new Form8EntryFragment(), bundle);
         setTitle(R.string.notification);
     }
 

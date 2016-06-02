@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.grampanchayat.R;
 import com.grampanchayat.adapter.Form8TopFormAdapter;
-import com.grampanchayat.models.Movie;
+import com.grampanchayat.models.PropertyDetailModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
     private TextView txtForm8TopHeader3;
     private RecyclerView rvTopEntryFromList;
     private Form8TopFormAdapter mAdapter;
-    private List<Movie> movieList = new ArrayList<>();
+    private List<PropertyDetailModel> propertyDetailModelList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
         txtForm8TopHeader3.setOnClickListener(this);
         prepareMovieData();
         rvTopEntryFromList =(RecyclerView) view.findViewById(R.id.rv_topEntryFromList);
-        mAdapter = new Form8TopFormAdapter(movieList);
+        mAdapter = new Form8TopFormAdapter(propertyDetailModelList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         rvTopEntryFromList.setLayoutManager(mLayoutManager);
         rvTopEntryFromList.setItemAnimator(new DefaultItemAnimator());
@@ -129,53 +129,53 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
         }
     }
     private void prepareMovieData() {
-        Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
-        movieList.add(movie);
+        PropertyDetailModel propertyDetailModel = new PropertyDetailModel("Mad Max: Fury Road", "Action & Adventure", "2015");
+        propertyDetailModelList.add(propertyDetailModel);
 
-        movie = new Movie("Inside Out", "Animation, Kids & Family", "2015");
-        movieList.add(movie);
+        propertyDetailModel = new PropertyDetailModel("Inside Out", "Animation, Kids & Family", "2015");
+        propertyDetailModelList.add(propertyDetailModel);
 
-//        movie = new Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Shaun the Sheep", "Animation", "2015");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Shaun the Sheep", "Animation", "2015");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("The Martian", "Science Fiction & Fantasy", "2015");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("The Martian", "Science Fiction & Fantasy", "2015");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Mission: Impossible Rogue Nation", "Action", "2015");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Mission: Impossible Rogue Nation", "Action", "2015");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Up", "Animation", "2009");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Up", "Animation", "2009");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Star Trek", "Science Fiction", "2009");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Star Trek", "Science Fiction", "2009");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("The LEGO Movie", "Animation", "2014");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("The LEGO PropertyDetailModel", "Animation", "2014");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Iron Man", "Action & Adventure", "2008");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Iron Man", "Action & Adventure", "2008");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Aliens", "Science Fiction", "1986");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Aliens", "Science Fiction", "1986");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Chicken Run", "Animation", "2000");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Chicken Run", "Animation", "2000");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Back to the Future", "Science Fiction", "1985");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Back to the Future", "Science Fiction", "1985");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Raiders of the Lost Ark", "Action & Adventure", "1981");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Raiders of the Lost Ark", "Action & Adventure", "1981");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Goldfinger", "Action & Adventure", "1965");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Goldfinger", "Action & Adventure", "1965");
+//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        movie = new Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014");
-//        movieList.add(movie);
+//        propertyDetailModel = new PropertyDetailModel("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014");
+//        propertyDetailModelList.add(propertyDetailModel);
 
 //        mAdapter.notifyDataSetChanged();
     }

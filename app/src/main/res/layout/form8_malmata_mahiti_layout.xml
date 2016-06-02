@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/margin_10dp"
     android:visibility="visible">
 
     <LinearLayout
@@ -405,7 +404,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="@string/ibl_use_for" />
+            android:text="@string/lbl_use_for" />
 
         <Spinner
             android:id="@+id/sp_use_for"
