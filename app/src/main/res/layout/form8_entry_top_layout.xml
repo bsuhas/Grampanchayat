@@ -7,9 +7,11 @@
     android:padding="@dimen/margin_10dp"
     android:visibility="gone">
 
-    <include layout="@layout/form8_item_layout" />
+    <include layout="@layout/form8_malmata_mahiti_layout" />
 
-   <!-- <android.support.v7.widget.RecyclerView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_topEntryFromList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />-->
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp" />
 </LinearLayout>

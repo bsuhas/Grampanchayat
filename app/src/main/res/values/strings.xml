@@ -66,6 +66,8 @@
     <string name="lbl_old_home_tax_bill">जुनी घरपट्टी</string>
     <string name="lbl_road_name">रस्त्याचे नाव</string>
     <string name="lbl_bhandwali_mulya_padath">भांडवली मूल्य पद्धत</string>
+    <string name="lbl_ward_name">वार्डाचे नाव</string>
+    <string name="lbl_delete">नष्ट करा</string>
 
 
 </resources>
