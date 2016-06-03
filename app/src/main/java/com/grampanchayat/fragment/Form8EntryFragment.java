@@ -16,7 +16,9 @@ import android.widget.TextView;
 
 import com.grampanchayat.R;
 import com.grampanchayat.adapter.Form8EntryPropertyDetailAdapter;
+import com.grampanchayat.adapter.Form8EntryPropertyOwnerDetailAdapter;
 import com.grampanchayat.models.PropertyDetailModel;
+import com.grampanchayat.models.PropertyOwnerDetailModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +40,11 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
     private TextView txtForm8TopHeader3;
     private RecyclerView rvTopEntryFromList;
     private Form8EntryPropertyDetailAdapter mAdapter;
+
     private List<PropertyDetailModel> propertyDetailModelList = new ArrayList<>();
+    private List<PropertyOwnerDetailModel> propertyOwnerDetailModelList = new ArrayList<>();
+    private RecyclerView rvPropertyOwnerDetail;
+    private Form8EntryPropertyOwnerDetailAdapter mOwnerDetailAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,13 +73,26 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
         txtForm8TopHeader1.setOnClickListener(this);
         txtForm8TopHeader2.setOnClickListener(this);
         txtForm8TopHeader3.setOnClickListener(this);
-        prepareMovieData();
+
+        // Property Detail
+        preparePropertyDetailData();
+
         rvTopEntryFromList =(RecyclerView) view.findViewById(R.id.rv_topEntryFromList);
         mAdapter = new Form8EntryPropertyDetailAdapter(propertyDetailModelList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         rvTopEntryFromList.setLayoutManager(mLayoutManager);
         rvTopEntryFromList.setItemAnimator(new DefaultItemAnimator());
         rvTopEntryFromList.setAdapter(mAdapter);
+
+        //Property Owner Detail
+        preparePropertyOwnerData();
+
+        rvPropertyOwnerDetail =(RecyclerView) view.findViewById(R.id.rv_property_owner_detail);
+        mOwnerDetailAdapter = new Form8EntryPropertyOwnerDetailAdapter(propertyOwnerDetailModelList);
+        RecyclerView.LayoutManager mLayoutManager1 = new LinearLayoutManager(mContext);
+        rvPropertyOwnerDetail.setLayoutManager(mLayoutManager1);
+        rvPropertyOwnerDetail.setItemAnimator(new DefaultItemAnimator());
+        rvPropertyOwnerDetail.setAdapter(mOwnerDetailAdapter);
 
 
     }
@@ -128,55 +147,21 @@ public class Form8EntryFragment extends Fragment implements View.OnClickListener
                 break;
         }
     }
-    private void prepareMovieData() {
+    private void preparePropertyDetailData() {
         PropertyDetailModel propertyDetailModel = new PropertyDetailModel("Mad Max: Fury Road", "Action & Adventure", "2015");
         propertyDetailModelList.add(propertyDetailModel);
 
         propertyDetailModel = new PropertyDetailModel("Inside Out", "Animation, Kids & Family", "2015");
         propertyDetailModelList.add(propertyDetailModel);
-
-//        propertyDetailModel = new PropertyDetailModel("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
-//        propertyDetailModelList.add(propertyDetailModel);
 //
-//        propertyDetailModel = new PropertyDetailModel("Shaun the Sheep", "Animation", "2015");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("The Martian", "Science Fiction & Fantasy", "2015");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Mission: Impossible Rogue Nation", "Action", "2015");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Up", "Animation", "2009");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Star Trek", "Science Fiction", "2009");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("The LEGO PropertyDetailModel", "Animation", "2014");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Iron Man", "Action & Adventure", "2008");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Aliens", "Science Fiction", "1986");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Chicken Run", "Animation", "2000");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Back to the Future", "Science Fiction", "1985");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Raiders of the Lost Ark", "Action & Adventure", "1981");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Goldfinger", "Action & Adventure", "1965");
-//        propertyDetailModelList.add(propertyDetailModel);
-//
-//        propertyDetailModel = new PropertyDetailModel("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014");
-//        propertyDetailModelList.add(propertyDetailModel);
-
 //        mAdapter.notifyDataSetChanged();
+    }
+    private void preparePropertyOwnerData() {
+        PropertyOwnerDetailModel propertyDetailOwnerModel = new PropertyOwnerDetailModel("Mad Max: Fury Road", "Action & Adventure", "2015","Priynaka","98506586985");
+        propertyOwnerDetailModelList.add(propertyDetailOwnerModel);
+
+        propertyDetailOwnerModel = new PropertyOwnerDetailModel("Inside Out", "Animation, Kids & Family", "2015","Priynaka","98506586985");
+        propertyOwnerDetailModelList.add(propertyDetailOwnerModel);
+
     }
 }

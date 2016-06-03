@@ -18,11 +18,11 @@ import java.util.List;
  */
 public class Form8EntryPropertyOwnerDetailAdapter extends RecyclerView.Adapter<Form8EntryPropertyOwnerDetailAdapter.MyViewHolder> {
 
-    private List<PropertyOwnerDetailModel> moviesList;
+    private List<PropertyOwnerDetailModel> PropertyOwnerDetailModelList;
 
 
-    public Form8EntryPropertyOwnerDetailAdapter(List<PropertyOwnerDetailModel> moviesList) {
-        this.moviesList = moviesList;
+    public Form8EntryPropertyOwnerDetailAdapter(List<PropertyOwnerDetailModel> PropertyOwnerDetailModelList) {
+        this.PropertyOwnerDetailModelList = PropertyOwnerDetailModelList;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Form8EntryPropertyOwnerDetailAdapter extends RecyclerView.Adapter<F
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        PropertyOwnerDetailModel propertyOwnerDetailModel = moviesList.get(position);
+        PropertyOwnerDetailModel propertyOwnerDetailModel = PropertyOwnerDetailModelList.get(position);
         holder.txtKhatedar.setText(propertyOwnerDetailModel.getKhatedar());
         holder.txtName.setText(propertyOwnerDetailModel.getName());
         holder.txtAddr.setText(propertyOwnerDetailModel.getAddr());
@@ -45,7 +45,7 @@ public class Form8EntryPropertyOwnerDetailAdapter extends RecyclerView.Adapter<F
 
     @Override
     public int getItemCount() {
-        return moviesList.size();
+        return PropertyOwnerDetailModelList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
