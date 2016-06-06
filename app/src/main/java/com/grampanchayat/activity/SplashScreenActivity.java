@@ -39,10 +39,10 @@ public class SplashScreenActivity extends AppCompatActivity {
     };
 
     private void checkUserLogin() {
-        Intent intent = new Intent(SplashScreenActivity.this, HomeActivity.class);
-        startActivity(intent);
-        finish();
-       /* boolean isLoggedIn = UserPreferences.getInstance(mContext).isUserLogin();
+//        Intent intent = new Intent(SplashScreenActivity.this, HomeActivity.class);
+//        startActivity(intent);
+//        finish();
+        boolean isLoggedIn = UserPreferences.getInstance(mContext).isUserLogin();
         if (isLoggedIn) {
             Intent intent = new Intent(SplashScreenActivity.this, HomeActivity.class);
             startActivity(intent);
@@ -51,6 +51,6 @@ public class SplashScreenActivity extends AppCompatActivity {
             Intent loginIntent = new Intent(SplashScreenActivity.this, LoginScreenActivity.class);
             startActivity(loginIntent);
             finish();
-        }*/
+        }
     }
 }

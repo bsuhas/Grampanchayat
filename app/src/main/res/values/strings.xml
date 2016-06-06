@@ -74,6 +74,7 @@
     <string name="lbl_ghrpati">घरपट्टी</string>
     <string name="lbl_fine">दंड</string>
     <string name="lbl_total">एकूण</string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
 
 
 </resources>

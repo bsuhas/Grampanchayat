@@ -23,12 +23,13 @@ import com.grampanchayat.utils.UserPreferences;
 public class LoginScreenActivity extends AppCompatActivity implements View.OnClickListener {
 //    private Spinner spVillage;
     private EditText edtMobileNumber;
-    private String[] DayOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+//    private String[] DayOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     private EditText edtEnterOtp;
     private Button btnLogin;
     private Button btnGenerateOTP;
     private LinearLayout llGenerateOTP;
     private LinearLayout llSubmitOTP;
+    private TextView txtResendOTP;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
 //        spVillage = (Spinner) findViewById(R.id.sp_village);
         edtMobileNumber = (EditText) findViewById(R.id.edt_username);
         edtEnterOtp = (EditText) findViewById(R.id.edt_enter_otp);
+        txtResendOTP = (TextView) findViewById(R.id.txt_resend_otp);
 
         btnGenerateOTP = (Button) findViewById(R.id.btn_generate_otp);
         btnLogin = (Button) findViewById(R.id.btn_login);
@@ -52,10 +54,12 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
         if (isLoggedIn) {
             llGenerateOTP.setVisibility(View.GONE);
             llSubmitOTP.setVisibility(View.VISIBLE);
+//            txtResendOTP.setVisibility(View.VISIBLE);
 
         } else {
             llGenerateOTP.setVisibility(View.VISIBLE);
             llSubmitOTP.setVisibility(View.GONE);
+//            txtResendOTP.setVisibility(View.GONE);
         }
 
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.sp_village_item, R.id.txt_village, DayOfWeek);
@@ -81,6 +85,7 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
 
         btnGenerateOTP.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
+        txtResendOTP.setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +96,11 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btn_login:
                 submitOTP();
+                break;
+            case R.id.txt_resend_otp:
+                llGenerateOTP.setVisibility(View.VISIBLE);
+                llSubmitOTP.setVisibility(View.GONE);
+//                txtResendOTP.setVisibility(View.GONE);
                 break;
         }
     }
