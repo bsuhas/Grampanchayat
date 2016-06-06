@@ -21,7 +21,10 @@ import android.widget.TextView;
 
 import com.grampanchayat.R;
 import com.grampanchayat.fragment.Form8EntryFragment;
+import com.grampanchayat.fragment.Form8RegisterFragment;
+import com.grampanchayat.fragment.Form9Fragment;
 import com.grampanchayat.fragment.NotificationFragment;
+import com.grampanchayat.fragment.TaxPayFragment;
 import com.grampanchayat.utils.UserPreferences;
 import com.grampanchayat.utils.Utils;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
@@ -104,28 +107,32 @@ public class HomeActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-
+        Bundle bundle = new Bundle();
         // Handle navigation view item clicks here.
         switch (item.getItemId()) {
             case R.id.nav_notification:
-                Bundle bundle = new Bundle();
                 setFragment(new NotificationFragment(), bundle);
                 setTitle(R.string.notification);
                 break;
             // Handle the camera action
             case R.id.nav_form8:
-                Bundle bundle1 = new Bundle();
-                setFragment(new Form8EntryFragment(), bundle1);
-                setTitle(R.string.notification);
+                setFragment(new Form8EntryFragment(), bundle);
+                setTitle(R.string.form8);
                 break;
 
             case R.id.nav_form8_register:
+                setFragment(new Form8RegisterFragment(), bundle);
+                setTitle(R.string.form8_register);
                 break;
 
             case R.id.nav_form9:
+                setFragment(new Form9Fragment(), bundle);
+                setTitle(R.string.form9);
                 break;
 
             case R.id.nav_tax:
+                setFragment(new TaxPayFragment(), bundle);
+                setTitle(R.string.tax_pay);
                 break;
 
             case R.id.nav_help:

@@ -10,6 +10,12 @@ public class PropertyOwnerDetailModel {
     private String addr;
     private String wifeName;
     private String mobileNum;
+    private String gpid;
+    private String psid;
+    private String rid;
+    private String mm;
+    private String yearid;
+    private String active;
 
     public PropertyOwnerDetailModel() {
     }
@@ -60,5 +66,53 @@ public class PropertyOwnerDetailModel {
 
     public void setMobileNum(String mobileNum) {
         this.mobileNum = mobileNum;
+    }
+
+    public String getGpid() {
+        return gpid;
+    }
+
+    public void setGpid(String gpid) {
+        this.gpid = gpid;
+    }
+
+    public String getPsid() {
+        return psid;
+    }
+
+    public void setPsid(String psid) {
+        this.psid = psid;
+    }
+
+    public String getRid() {
+        return rid;
+    }
+
+    public void setRid(String rid) {
+        this.rid = rid;
+    }
+
+    public String getMm() {
+        return mm;
+    }
+
+    public void setMm(String mm) {
+        this.mm = mm;
+    }
+
+    public String getYearid() {
+        return yearid;
+    }
+
+    public void setYearid(String yearid) {
+        this.yearid = yearid;
+    }
+
+    public String getActive() {
+        return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
     }
 }

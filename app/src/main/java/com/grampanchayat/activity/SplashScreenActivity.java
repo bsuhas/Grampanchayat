@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.grampanchayat.R;
+import com.grampanchayat.database.DBHelper;
 import com.grampanchayat.utils.UserPreferences;
 
 /**
@@ -23,7 +24,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.splash_screen);
         mContext = this;
         displayLandingScreen();
-//        DBHelper.getInstance(this).initDB();
+        DBHelper.getInstance(this).initDB();
     }
 
     public void displayLandingScreen() {
@@ -38,8 +39,10 @@ public class SplashScreenActivity extends AppCompatActivity {
     };
 
     private void checkUserLogin() {
-
-        boolean isLoggedIn = UserPreferences.getInstance(mContext).isUserLogin();
+        Intent intent = new Intent(SplashScreenActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
+       /* boolean isLoggedIn = UserPreferences.getInstance(mContext).isUserLogin();
         if (isLoggedIn) {
             Intent intent = new Intent(SplashScreenActivity.this, HomeActivity.class);
             startActivity(intent);
@@ -48,6 +51,6 @@ public class SplashScreenActivity extends AppCompatActivity {
             Intent loginIntent = new Intent(SplashScreenActivity.this, LoginScreenActivity.class);
             startActivity(loginIntent);
             finish();
-        }
+        }*/
     }
 }

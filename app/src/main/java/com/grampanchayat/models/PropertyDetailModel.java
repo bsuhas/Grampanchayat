@@ -25,6 +25,11 @@ public class PropertyDetailModel {
     private String bandhkam;
     private String buildYear;
     private String useFor;
+    private String yearid;
+    private String active;
+    private String gpid;
+    private String psid;
+    private String rid;
 
     public PropertyDetailModel() {
     }
@@ -169,5 +174,45 @@ public class PropertyDetailModel {
 
     public void setUseFor(String useFor) {
         this.useFor = useFor;
+    }
+
+    public String getYearid() {
+        return yearid;
+    }
+
+    public void setYearid(String yearid) {
+        this.yearid = yearid;
+    }
+
+    public String getActive() {
+        return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
+    }
+
+    public String getGpid() {
+        return gpid;
+    }
+
+    public void setGpid(String gpid) {
+        this.gpid = gpid;
+    }
+
+    public String getPsid() {
+        return psid;
+    }
+
+    public void setPsid(String psid) {
+        this.psid = psid;
+    }
+
+    public String getRid() {
+        return rid;
+    }
+
+    public void setRid(String rid) {
+        this.rid = rid;
     }
 }
