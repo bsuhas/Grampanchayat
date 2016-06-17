@@ -126,6 +126,7 @@
                     android:text="Search Result"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
+                <include layout="@layout/from_8_register_search_result_layout" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

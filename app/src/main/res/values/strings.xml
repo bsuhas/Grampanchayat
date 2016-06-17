@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EMPR</string>
+    <string name="app_name">eग्राम</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -75,6 +75,7 @@
     <string name="lbl_fine">दंड</string>
     <string name="lbl_total">एकूण</string>
     <string name="resend_otp"><u>Resend OTP</u></string>
+    <string name="lbl_health">आरोग्य</string>
 
 
 </resources>

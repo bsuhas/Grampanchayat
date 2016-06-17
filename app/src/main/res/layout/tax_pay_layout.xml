@@ -117,7 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -131,15 +131,56 @@
                         style="@style/Label_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
+                        android:textStyle="bold"
+                        android:text="प्रकार" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:textStyle="bold"
+                        android:text="बाकी" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:gravity="center"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
                         android:text="@string/lbl_ghrpati" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="left"
+                        android:text="0" />
 
                     <EditText
                         android:id="@+id/edt_ghr_pti"
                         style="@style/Edit_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:ems="10" />
                 </LinearLayout>
 
@@ -155,15 +196,23 @@
                         style="@style/Label_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:text="@string/lbl_water_bill" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="left"
+                        android:text="0" />
 
                     <EditText
                         android:id="@+id/edt_water_bill"
                         style="@style/Edit_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:ems="10" />
                 </LinearLayout>
 
@@ -179,15 +228,23 @@
                         style="@style/Label_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:text="@string/lbl_health_tax" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="left"
+                        android:text="0" />
 
                     <EditText
                         android:id="@+id/edt_health_bill"
                         style="@style/Edit_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:ems="10" />
                 </LinearLayout>
 
@@ -203,15 +260,23 @@
                         style="@style/Label_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:text="@string/lbl_electricity_tax" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="left"
+                        android:text="0" />
 
                     <EditText
                         android:id="@+id/edt_electricity_tax"
                         style="@style/Edit_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:ems="10" />
                 </LinearLayout>
 
@@ -227,17 +292,32 @@
                         style="@style/Label_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:text="@string/lbl_fine" />
+
+                    <TextView
+                        style="@style/Label_TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="left"
+                        android:text="0" />
 
                     <EditText
                         android:id="@+id/edt_fine"
                         style="@style/Edit_TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:ems="10" />
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:background="@color/light_gray_60" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -258,6 +338,7 @@
                         android:id="@+id/edt_total"
                         style="@style/Edit_TextView"
                         android:layout_width="0dp"
+                        android:enabled="false"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:ems="10" />
